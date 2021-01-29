@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.obrii.mit.dp2021.shmat</groupId>
-    <artifactId>dp2021StarterProject</artifactId>
+    <artifactId>ShmatKateryna2021</artifactId>
     <version>01</version>
     <packaging>war</packaging>
 
-    <name>dp2021StarterProject</name>
+    <name>ShmatKateryna2021</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
