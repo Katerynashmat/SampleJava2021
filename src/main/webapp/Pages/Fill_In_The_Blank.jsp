@@ -157,7 +157,7 @@ button {
 }
 
 .mt-0 {
-    margin-top: 0
+    margin-top: -90px
 }
 
 button {
@@ -316,6 +316,11 @@ main {
     position: relative;
     margin-left: 55px
 }
+
+.Texta3{
+    position: relative;
+    margin-left: 95px
+}
         </style>
     </head>
     <body>
@@ -324,11 +329,12 @@ main {
             <section class="hero">
                 <div class="container">
 			<div class="hero-copy">
+                            <h1 class="hero-title mt-0">Please, fill in the form. Let me know you better!</h1>
                         <p>
                             Name: <input class="Texta" type="text" name="name" required>
                         </p>
                         <p>
-                            Family name: <input class="Texta1" type="text" id="secondname" name="familyname"/>
+                            Family name: <input class="Texta1" type="text" id="secondname" name="familyname" required>
                         </p>
                         <p>
                             Birthday: <input  class="Texta2" type="date" id="start" name="birthday"
@@ -343,6 +349,9 @@ main {
                            Language: <input class="lng" type="checkbox" name="language" value="Ukrainian">Ukrainian</input>
                                      <input class="lng" type="checkbox" name="language" value="English">English</input>  
                                      <input class="lng" type="checkbox" name="language" value="English">German</input> 
+                        </p>
+                        <p>
+                            Email: <input class="Texta3" type="email" name="email" required>
                         </p>
 	                        <div class="hero-cta"><button type="submit">Submit</button></div>
                     </div>

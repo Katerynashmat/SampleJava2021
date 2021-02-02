@@ -159,7 +159,7 @@ button {
 }
 
 .mt-0 {
-    margin-top: 0
+    margin-top: -90px
 }
 
 .button {
@@ -314,12 +314,17 @@ main {
 
 .radio{
     position: relative;
-    margin-left: 83px;
+    margin-left: 80px;
 }
 
 .lng{
     position: relative;
-    margin-left: 50px
+    margin-left: 45px
+}
+
+.Texta3{
+    position: relative;
+    margin-left: 70px
 }
         </style>
     </head>
@@ -328,6 +333,7 @@ main {
             <section class="hero">
                 <div class="container">
 			<div class="hero-copy">
+                            <h1 class="hero-title mt-0">Good! Now I have some information about you. Expect a letter from me!</h1>
                             <p>Name is: <span class="Texta"><%= request.getParameter("name")%></span></p>
                             <p>Family name is: <span  class="Texta1"><%= request.getParameter("familyname")%></span></p>
                             <p>Birthday is: <span  class="Texta2"><%= request.getParameter("birthday")%></span></p>
@@ -344,6 +350,7 @@ main {
                                 out.print("Unselected");
                                 }
                                 %></span></p>
+                            <p>Your email: <span class="Texta3"><%= request.getParameter("email")%></span></p>
                                     <div class="hero-cta"><a class="button button-shadow" href="../">Home page</a>
                                     </div>
 			</div> 
