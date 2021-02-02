@@ -351,7 +351,7 @@ main {
                                 }
                                 %></span></p>
                             <p>Your email: <span class="Texta3"><%= request.getParameter("email")%></span></p>
-                                    <div class="hero-cta"><a class="button button-shadow" href="../">Home page</a>
+                            <div class="hero-cta"><a class="button button-shadow" href="<%=request.getContextPath()%>">Home page</a>
                                     </div>
 			</div> 
                 </div>
