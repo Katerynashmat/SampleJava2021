@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.shmat.dp2021starterproject;
+package org.obrii.mit.dp2021.shmat.ShmatKateryna2021;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author HP
+ * @author 38068
  */
+@WebServlet(name = "NewServlet", urlPatterns = {"/Fill_In_The_Blank"})
 public class NewServlet extends HttpServlet {
 
     /**
@@ -27,23 +28,7 @@ public class NewServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
-            out.println("<h2>'Hello world!'</h2>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
+   
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -57,7 +42,7 @@ public class NewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("Fill_In_The_Blank.jsp").forward(request,response);
     }
 
     /**
@@ -71,7 +56,18 @@ public class NewServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        User 
+                user = new User( 
+                request.getParameter("name"),
+                request.getParameter("familyname"),
+                request.getParameter("birthday"),
+                request.getParameter("gender"),
+                request.getParameterValues("language"),
+                request.getParameter("email")
+        );
+        
+        request.setAttribute("user", user);
+        request.getRequestDispatcher("Filled_Blank.jsp").forward(request, response);
     }
 
     /**

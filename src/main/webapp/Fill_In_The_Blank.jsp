@@ -324,7 +324,8 @@ main {
         </style>
     </head>
     <body>
-      <form action="Filled_Blank.jsp" method="post">
+      <form action="<%=request.getContextPath()%>/Fill_In_The_Blank" method="post">
+          <input type="hidden" name="title" value="Submited"/>
       <main>
             <section class="hero">
                 <div class="container">
@@ -334,7 +335,7 @@ main {
                             Name: <input class="Texta" type="text" name="name" required>
                         </p>
                         <p>
-                            Family name: <input class="Texta1" type="text" id="secondname" name="familyname" required>
+                            Family name: <input class="Texta1" type="text" name="familyname" required>
                         </p>
                         <p>
                             Birthday: <input  class="Texta2" type="date" id="start" name="birthday"
@@ -353,7 +354,7 @@ main {
                         <p>
                             Email: <input class="Texta3" type="email" name="email" required>
                         </p>
-	                        <div class="hero-cta"><button type="submit">Submit</button></div>
+	                        <div class="hero-cta"><input type="submit" value="Submit"></div>
                     </div>
                 </div>
             </section>

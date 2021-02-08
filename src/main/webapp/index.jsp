@@ -162,7 +162,7 @@ button {
     margin-top: 0
 }
 
-.button {
+form {
     position: relative;
     display: inline-flex;
     font-size: 14px;
@@ -200,9 +200,11 @@ button {
 	}
 }
 
-.button:hover {
+form:hover {
     animation: bounce 1s;
 }
+
+
 
 .hero {
     text-align: center;
@@ -292,6 +294,14 @@ button {
     }
 }
 
+input{
+    background-color: #273C5A;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
 main {
     flex: 1 0 auto
 }
@@ -306,13 +316,14 @@ main {
 			<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Welcome to Kateryna's page!</h1>
 	                        <p class="hero-paragraph">I am a second year student of the Faculty of Information Technology at the Department of Network and Internet Technologies</p>
-	                        <div class="hero-cta"><a class="button button-shadow" href="<%=request.getContextPath()%>/Pages/Fill_In_The_Blank.jsp">Fill in the form</a></div>
+	                        <div class="hero-cta"><form action="<%=request.getContextPath()%>/Fill_In_The_Blank" method="get">
+                                        <input type="submit" value="Fill in the form"/></form></div>
 						</div>
 							<img class="device-mockup" src="12.jpg" alt="App preview">
 							</div>
 						</div>
                     </div>
-                </div>
+               
             </section>
       </main>
     </body>
