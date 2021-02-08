@@ -160,7 +160,7 @@ button {
     margin-top: -90px
 }
 
-button {
+.button {
     position: relative;
     margin-top: 30px;
     display: inline-flex;
@@ -199,7 +199,7 @@ button {
 	}
 }
 
-button:hover {
+.button:hover {
     animation: bounce 1s;
 }
 
@@ -354,7 +354,7 @@ main {
                         <p>
                             Email: <input class="Texta3" type="email" name="email" required>
                         </p>
-	                        <div class="hero-cta"><input type="submit" value="Submit"></div>
+	                        <div class="hero-cta"><input class="button" type="submit" value="Submit"></div>
                     </div>
                 </div>
             </section>
