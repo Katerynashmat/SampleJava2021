@@ -1,10 +1,10 @@
 <%-- 
     Document   : Filled_Form
-    Created on : 16 февр. 2021 г., 15:30:45
+    Created on : 16 ????. 2021 ?., 15:30:45
     Author     : HP
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="org.obrii.mit.dp2021.shmat.ShmatKateryna2021.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -291,7 +291,6 @@ main {
                             <h1 class="hero-title mt-0">Wait for our invitation to your new job!</h1>
                             <p>Name is: <span class="Texta"><%= request.getParameter("name")%></span></p>
                             <p>Family name is: <span  class="Texta1"><%= request.getParameter("familyname")%></span></p>
-                            <p>Birthday is: <span  class="Texta2"><%= request.getParameter("birthday")%></span></p>
                             <p>Gender is: <span  class="radio"><%= request.getParameter("gender")%></span></p>
                             <p>Languages is:<span  class="lng"><%= request.getParameter("language")%></span></p>
                             <p>Your email: <span class="Texta3"><%= request.getParameter("email")%></span></p>

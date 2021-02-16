@@ -13,7 +13,7 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        OldInterface user = new User("Katya", "");
+        OldInterface user = new User("", "");
         OldDisplayInterface display = new ChildDisplay();
         PrintMessage(display, user);
         display = new Display();

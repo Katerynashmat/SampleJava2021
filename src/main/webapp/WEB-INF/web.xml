@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
-        <url-pattern>/Fill_Form</url-pattern>
+        <url-pattern>/Filled_Form</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

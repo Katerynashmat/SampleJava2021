@@ -11,7 +11,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Fill in the blank</title>
         <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
-        <link rel="shortcut icon" href="File-Blank.ico" type="image/x-icon">
         <style type='text/css'>
             html {
     line-height: 1.15;
