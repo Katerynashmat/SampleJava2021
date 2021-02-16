@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 29 янв. 2021 г., 20:24:09
+    Document   : Filled_Form
+    Created on : 16 февр. 2021 г., 15:30:45
     Author     : HP
 --%>
 
@@ -9,42 +9,34 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Kateryna's page</title>
+        <title>Data</title>
         <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
-        <link rel="shortcut icon" href="11.ico" type="image/x-icon">
         <style type='text/css'>
             html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
-
 body {
     margin: 0
 }
-
 section {
     display: block
 }
-
 h1 {
     font-size: 2em;
     margin: 0.67em 0
 }
-
 main {
     display: block
 }
-
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
 }
-
 img {
     border-style: none
 }
-
 button{
     font-family: sans-serif;
     font-size: 100%;
@@ -54,40 +46,33 @@ button{
     text-transform: none;
     -webkit-appearance: button
 }
-
 html {
     box-sizing: border-box
 }
-
 *,
 *:before,
 *:after {
     box-sizing: inherit
 }
-
 body {
     background: #06101F;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased
 }
-
 img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
     display: block
 }
-
 html {
     font-size: 20px;
     line-height: 30px
 }
-
 body {
     color: #7487A3;
     font-size: 1rem
 }
-
 body,
 button,
 input,
@@ -95,18 +80,15 @@ select,
 textarea {
     font-family: "Heebo", sans-serif
 }
-
 a {
     color: #F9425F;
     text-decoration: none
 }
-
 a:hover,
 a:active {
     outline: 0;
     text-decoration: underline
 }
-
 h1 {
     clear: both;
     color: #fff;
@@ -116,7 +98,6 @@ h1 {
     line-height: 56px;
     letter-spacing: 0px
 }
-
 @media (min-width: 641px) {
     h1 {
         font-size: 48px;
@@ -124,50 +105,43 @@ h1 {
         letter-spacing: 0px
     }
 }
-
 h1 {
     margin-top: 48px;
     margin-bottom: 16px
 }
-
 p {
     margin-top: 0;
     margin-bottom: 24px
 }
-
 button {
     font-size: 20px;
     line-height: 30px
 }
-
 .container {
     width: 100%;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px
 }
-
 @media (min-width: 481px) {
     .container {
         padding-left: 24px;
         padding-right: 24px
     }
 }
-
 .container {
     max-width: 1128px
 }
-
 .mt-0 {
-    margin-top: 0
+    margin-top: -90px
 }
-
 .button {
     position: relative;
     display: inline-flex;
     font-size: 14px;
     letter-spacing: 0px;
     font-weight: 700;
+    margin-top: 30px;
     line-height: 16px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -182,42 +156,34 @@ button {
     text-align: center;
     white-space: nowrap;
 }
-
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
 		transform: translateY(0);
 		transform: translateY(0);
 	}
-
 	40% {
 		transform: translateY(-20px);
 		transform: translateY(-20px);
 	}
-
 	80% {
 		transform: translateY(-10px);
 		transform: translateY(-10px);
 	}
 }
-
 .button:hover {
     animation: bounce 1s;
 }
-
 .hero {
     text-align: center;
     padding-top: 48px;
     padding-bottom: 24px
 }
-
 .hero-copy {
     position: relative
 }
-
 .hero-paragraph {
     margin-bottom: 32px
 }
-
 .device-mockup {
     position: relative;
     width: 350px;
@@ -229,14 +195,12 @@ button {
     transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005);
     transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), -webkit-transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005)
 }
-
 .hero-cta {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px
 }
-
 @media (max-width: 639px) {
     .hero-cta .button {
         display: flex
@@ -245,7 +209,6 @@ button {
         margin-top: 16px
     }
 }
-
 @media (min-width: 641px) {
     .hero {
         position: relative;
@@ -291,27 +254,50 @@ button {
         margin-right: 16px
     }
 }
-
 main {
     flex: 1 0 auto
 }
-
+.Texta{
+    position: relative;
+    margin-left: 90px
+}
+.Texta1{
+    position: relative;
+    margin-left: 30px
+}
+.Texta2{
+    position: relative;
+    margin-left: 70px
+}
+.radio{
+    position: relative;
+    margin-left: 80px;
+}
+.lng{
+    position: relative;
+    margin-left: 45px
+}
+.Texta3{
+    position: relative;
+    margin-left: 70px
+}
         </style>
     </head>
     <body>
       <main>
             <section class="hero">
                 <div class="container">
-                    <div class="hero-inner">
 			<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Welcome to Kateryna's page!</h1>
-	                        <p class="hero-paragraph">I am a second year student of the Faculty of Information Technology at the Department of Network and Internet Technologies</p>
-	                        <div class="hero-cta"><a class="button button-shadow" href="<%=request.getContextPath()%>/Pages/Fill_In_The_Blank.jsp">Fill in the form</a></div>
-						</div>
-							<img class="device-mockup" src="12.jpg" alt="App preview">
-							</div>
-						</div>
-                    </div>
+                            <h1 class="hero-title mt-0">Wait for our invitation to your new job!</h1>
+                            <p>Name is: <span class="Texta"><%= request.getParameter("name")%></span></p>
+                            <p>Family name is: <span  class="Texta1"><%= request.getParameter("familyname")%></span></p>
+                            <p>Birthday is: <span  class="Texta2"><%= request.getParameter("birthday")%></span></p>
+                            <p>Gender is: <span  class="radio"><%= request.getParameter("gender")%></span></p>
+                            <p>Languages is:<span  class="lng"><%= request.getParameter("language")%></span></p>
+                            <p>Your email: <span class="Texta3"><%= request.getParameter("email")%></span></p>
+                            <div class="hero-cta"><a class="button button-shadow" href="<%=request.getContextPath()%>">Home page</a>
+                                    </div>
+			</div> 
                 </div>
             </section>
       </main>

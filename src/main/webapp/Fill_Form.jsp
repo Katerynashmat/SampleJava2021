@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 29 янв. 2021 г., 20:24:09
+    Document   : Fill_Form
+    Created on : 16 февр. 2021 г., 15:30:32
     Author     : HP
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Data</title>
+        <title>Fill in the blank</title>
         <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
         <link rel="shortcut icon" href="File-Blank.ico" type="image/x-icon">
         <style type='text/css'>
@@ -18,33 +18,26 @@
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
-
 body {
     margin: 0
 }
-
 section {
     display: block
 }
-
 h1 {
     font-size: 2em;
     margin: 0.67em 0
 }
-
 main {
     display: block
 }
-
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
 }
-
 img {
     border-style: none
 }
-
 button{
     font-family: sans-serif;
     font-size: 100%;
@@ -54,59 +47,46 @@ button{
     text-transform: none;
     -webkit-appearance: button
 }
-
 html {
     box-sizing: border-box
 }
-
 *,
 *:before,
 *:after {
     box-sizing: inherit
 }
-
 body {
     background: #06101F;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased
 }
-
 img {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
     display: block
 }
-
 html {
     font-size: 20px;
     line-height: 30px
 }
-
 body {
     color: #7487A3;
     font-size: 1rem
 }
-
 body,
-button,
-input,
-select,
-textarea {
+button {
     font-family: "Heebo", sans-serif
 }
-
 a {
     color: #F9425F;
     text-decoration: none
 }
-
 a:hover,
 a:active {
     outline: 0;
     text-decoration: underline
 }
-
 h1 {
     clear: both;
     color: #fff;
@@ -116,7 +96,6 @@ h1 {
     line-height: 56px;
     letter-spacing: 0px
 }
-
 @media (min-width: 641px) {
     h1 {
         font-size: 48px;
@@ -124,51 +103,44 @@ h1 {
         letter-spacing: 0px
     }
 }
-
 h1 {
     margin-top: 48px;
     margin-bottom: 16px
 }
-
 p {
     margin-top: 0;
-    margin-bottom: 24px
+    margin-bottom: 24px;
+    color: #ABCDEF
 }
-
 button {
     font-size: 20px;
     line-height: 30px
 }
-
 .container {
     width: 100%;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px
 }
-
 @media (min-width: 481px) {
     .container {
         padding-left: 24px;
         padding-right: 24px
     }
 }
-
 .container {
     max-width: 1128px
 }
-
 .mt-0 {
-    margin-top: 0
+    margin-top: -90px
 }
-
 .button {
     position: relative;
+    margin-top: 30px;
     display: inline-flex;
     font-size: 14px;
     letter-spacing: 0px;
     font-weight: 700;
-    margin-top: 30px;
     line-height: 16px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -183,42 +155,34 @@ button {
     text-align: center;
     white-space: nowrap;
 }
-
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
 		transform: translateY(0);
 		transform: translateY(0);
 	}
-
 	40% {
 		transform: translateY(-20px);
 		transform: translateY(-20px);
 	}
-
 	80% {
 		transform: translateY(-10px);
 		transform: translateY(-10px);
 	}
 }
-
 .button:hover {
     animation: bounce 1s;
 }
-
 .hero {
     text-align: center;
     padding-top: 48px;
     padding-bottom: 24px
 }
-
 .hero-copy {
     position: relative
 }
-
 .hero-paragraph {
     margin-bottom: 32px
 }
-
 .device-mockup {
     position: relative;
     width: 350px;
@@ -230,14 +194,12 @@ button {
     transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005);
     transition: opacity 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005), -webkit-transform 0.6s cubic-bezier(0.5, -0.01, 0, 1.005)
 }
-
 .hero-cta {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px
 }
-
 @media (max-width: 639px) {
     .hero-cta .button {
         display: flex
@@ -246,7 +208,6 @@ button {
         margin-top: 16px
     }
 }
-
 @media (min-width: 641px) {
     .hero {
         position: relative;
@@ -263,10 +224,7 @@ button {
         height: 461px;
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDE1IiBoZWlnaHQ9IjQ2MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gIDxkZWZzPiAgICA8bGluZWFyR3JhZGllbnQgeDE9IjguNjg1JSIgeTE9IjIzLjczMyUiIHgyPSI5OS40MzUlIiB5Mj0iODUuMDc4JSIgaWQ9ImEiPiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMxRDMwNEIiIG9mZnNldD0iMCUiLz4gICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjMUQzMDRCIiBzdG9wLW9wYWNpdHk9IjAiIG9mZnNldD0iMTAwJSIvPiAgICA8L2xpbmVhckdyYWRpZW50PiAgPC9kZWZzPiAgPHBhdGggZD0iTTMxOC4xNzEgNjE2LjY0YzE2MC4wODYgMCA3MDIuNTI3LTIyOC4yNiAyODkuODYyLTI5MC00MTIuNjY2LTYxLjczOC0xMjkuNzc2LTI5MC0yODkuODYyLTI5MFMyOC4zMSAxNjYuNDc5IDI4LjMxIDMyNi42NGMwIDE2MC4xNjMgMTI5Ljc3NSAyOTAgMjg5Ljg2MSAyOTB6IiB0cmFuc2Zvcm09InJvdGF0ZSgtNiAtMTMyNy4wMyAzNTk0LjM4KSIgZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+)
     }
-    .hero-inner {
-        display: flex;
-        justify-content: space-between
-    }
+    
     .hero-copy {
         padding-top: 88px;
         padding-right: 48px;
@@ -285,70 +243,72 @@ button {
     .hero-cta {
         margin: 0
     }
-    .hero-cta .button {
+    .hero-cta button {
         min-width: 170px
     }
-    .hero-cta .button:first-child {
+    .hero-cta button:first-child {
         margin-right: 16px
     }
 }
-
 main {
     flex: 1 0 auto
 }
-
 .Texta{
     position: relative;
     margin-left: 90px
 }
-
 .Texta1{
     position: relative;
     margin-left: 30px
 }
-
 .Texta2{
     position: relative;
     margin-left: 70px
 }
-
 .radio{
     position: relative;
-    margin-left: 83px;
+    margin-left: 75px;
 }
-
 .lng{
     position: relative;
-    margin-left: 50px
+    margin-left: -20px
+}
+.Texta3{
+    position: relative;
+    margin-left: 95px
 }
         </style>
     </head>
     <body>
+      <form action="<%=request.getContextPath()%>/Fill_Form" method="post">
+          <input type="hidden" name="title" value="Submited"/>
       <main>
             <section class="hero">
                 <div class="container">
 			<div class="hero-copy">
-                            <p>Name is: <span class="Texta"><%= request.getParameter("name")%></span></p>
-                            <p>Family name is: <span  class="Texta1"><%= request.getParameter("familyname")%></span></p>
-                            <p>Birthday is: <span  class="Texta2"><%= request.getParameter("birthday")%></span></p>
-                            <p>Gender is: <span  class="radio"><%= request.getParameter("gender")%></span></p>
-                            <p>Languages is:<span  class="lng">
-                                <%
-                                String[] languages = request.getParameterValues("language");
-                                if (languages != null) {
-                                for (int i = 0; i < languages.length; i++) {
-                                    out.print(languages[i]);
-                                    out.print("<br/>");
-                                }                 
-                                }else {
-                                out.print("Unselected");
-                                }
-                                %></span></p>
-                                    <div class="hero-cta"><a class="button button-shadow" href="../">Home page</a>
-                                    </div>
-			</div> 
+                            <h1 class="hero-title mt-0">Fill in the form to launch our friendly team!</h1>
+                        <p>
+                            Name: <input class="Texta" type="text" name="name" required>
+                        </p>
+                        <p>
+                            Family name: <input class="Texta1" type="text" name="familyname" required>
+                        </p>
+                        <p>
+                            Gender: <span class="radio"><input type="radio" name="gender" value="Male">Male</span>
+                                    <span class="radio"><input type="radio" name="gender" value="Female">Female</span>
+                        </p>
+                        <p>
+                           Language: <span class="radio"><input class="lng" type="radio" name="language" value="Ukrainian">Ukrainian</span>
+                                     <span class="radio"><input class="lng" type="radio" name="language" value="English">English</span>  
+                        </p>
+                        <p>
+                            Email: <input class="Texta3" type="email" name="email" required>
+                        </p>
+	                        <div class="hero-cta"><input class="button" type="submit" value="Submit"></div>
+                    </div>
                 </div>
             </section>
       </main>
+      </form>
     </body>
 </html>
