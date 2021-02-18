@@ -4,7 +4,7 @@
     Author     : HP
 --%>
 
-<%@page import="org.obrii.mit.dp2021.shmat.ShmatKateryna2021.User"%>
+<%@page import="org.obrii.mit.dp2021.shmat.ShmatKateryna2021.Main"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -290,10 +290,8 @@ main {
 			<div class="hero-copy">
                             <h1 class="hero-title mt-0">Wait for our invitation to your new job!</h1>
                             <p>Name is: <span class="Texta"><%= request.getParameter("name")%></span></p>
-                            <p>Family name is: <span  class="Texta1"><%= request.getParameter("familyname")%></span></p>
-                            <p>Gender is: <span  class="radio"><%= request.getParameter("gender")%></span></p>
-                            <p>Languages is:<span  class="lng"><%= request.getParameter("language")%></span></p>
-                            <p>Your email: <span class="Texta3"><%= request.getParameter("email")%></span></p>
+                            <p>Colour is: <span  class="radio"><%= request.getParameter("color")%></span></p>
+                            <p>Delivery is:<span  class="lng"><%= request.getParameter("delivery")%></span></p>
                             <div class="hero-cta"><a class="button button-shadow" href="<%=request.getContextPath()%>">Home page</a>
                                     </div>
 			</div> 

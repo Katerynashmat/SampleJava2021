@@ -270,7 +270,7 @@ main {
 }
 .lng{
     position: relative;
-    margin-left: -20px
+    margin-left: -8px
 }
 .Texta3{
     position: relative;
@@ -285,23 +285,17 @@ main {
             <section class="hero">
                 <div class="container">
 			<div class="hero-copy">
-                            <h1 class="hero-title mt-0">Fill in the form to launch our friendly team!</h1>
+                            <h1 class="hero-title mt-0">Choose your prize by yourself!</h1>
                         <p>
                             Name: <input class="Texta" type="text" name="name" required>
                         </p>
                         <p>
-                            Family name: <input class="Texta1" type="text" name="familyname" required>
+                            Colour: <span class="radio"><input type="radio" name="color" value="Blue">Blue</span>
+                                    <span class="radio"><input type="radio" name="color" value="Pink">Pink</span>
                         </p>
                         <p>
-                            Gender: <span class="radio"><input type="radio" name="gender" value="Male">Male</span>
-                                    <span class="radio"><input type="radio" name="gender" value="Female">Female</span>
-                        </p>
-                        <p>
-                           Language: <span class="radio"><input class="lng" type="radio" name="language" value="Ukrainian">Ukrainian</span>
-                                     <span class="radio"><input class="lng" type="radio" name="language" value="English">English</span>  
-                        </p>
-                        <p>
-                            Email: <input class="Texta3" type="email" name="email" required>
+                           Delivery: <span class="radio"><input class="lng" type="radio" name="delivery" value="Courier">Courier</span>
+                                     <span class="radio"><input class="lng" type="radio" name="delivery" value="NewPost">New Post</span>  
                         </p>
 	                        <div class="hero-cta"><input class="button" type="submit" value="Submit"></div>
                     </div>
