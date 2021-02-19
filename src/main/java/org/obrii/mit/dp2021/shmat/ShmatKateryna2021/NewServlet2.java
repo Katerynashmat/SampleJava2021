@@ -53,17 +53,17 @@ public class NewServlet2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         Main 
-                main = new Main( 
+         User 
+                user = new User( 
                 request.getParameter("name"),
                 request.getParameter("color"),
-                request.getParameterValues("delivery"));
+                request.getParameter("delivery"));
          
-         request.setAttribute("main", main);
-        request.getRequestDispatcher("Filled_Blank.jsp").forward(request, response);
+         request.setAttribute("user", user);
+        request.getRequestDispatcher("/Filled_Form.jsp").forward(request, response);
             
     }
-
+    
     /**
      * Returns a short description of the servlet.
      *

@@ -264,7 +264,7 @@ main {
                 <div class="container">
                     <div class="hero-inner">
 			<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Congradulations!</h1>
+	                        <h1 class="hero-title mt-0">Congratulations!</h1>
 	                        <p class="hero-paragraph">You are the winer! For choosing your prise please fill in the form, clicking the button below!</p>
 	                        <div class="hero-cta"><form action="<%=request.getContextPath()%>/Fill_Form.jsp" method="get">
                                         <input class="button" type="submit" value="Fill in the form"/></form></div>

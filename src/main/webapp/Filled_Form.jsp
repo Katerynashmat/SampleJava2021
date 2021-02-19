@@ -4,7 +4,7 @@
     Author     : HP
 --%>
 
-<%@page import="org.obrii.mit.dp2021.shmat.ShmatKateryna2021.Main"%>
+<%@page import="org.obrii.mit.dp2021.shmat.ShmatKateryna2021.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -271,15 +271,11 @@ main {
 }
 .radio{
     position: relative;
-    margin-left: 80px;
+    margin-left: 84px;
 }
 .lng{
     position: relative;
-    margin-left: 45px
-}
-.Texta3{
-    position: relative;
-    margin-left: 70px
+    margin-left: 76px
 }
         </style>
     </head>
