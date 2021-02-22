@@ -10,4 +10,12 @@ public class Product implements ProductInterface{
     public String getName(){
         return this.type;
     }
+    
+    public String getColor(){
+        return this.type;
+    }
+    
+    public String getDelivery(){
+        return this.type;
+    }
 }

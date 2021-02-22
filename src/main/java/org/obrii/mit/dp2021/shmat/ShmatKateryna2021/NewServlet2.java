@@ -53,13 +53,13 @@ public class NewServlet2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         User 
-                user = new User( 
+         Product
+                product = new Product( 
                 request.getParameter("name"),
                 request.getParameter("color"),
                 request.getParameter("delivery"));
          
-         request.setAttribute("user", user);
+         request.setAttribute("product", product);
         request.getRequestDispatcher("/Filled_Form.jsp").forward(request, response);
             
     }
