@@ -83,7 +83,7 @@ section{
     font-size: 14px;
     letter-spacing: 0px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 80px;
     line-height: 16px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -97,7 +97,7 @@ section{
     height: 48px;
     text-align: center;
     white-space: nowrap;
-    margin-left: 50px;
+    margin-left: 500px;
 }
 
 
@@ -151,9 +151,10 @@ section{
                           </tr>
                       </tbody>
                   </table>
+                  <div class="hero-cta"><input class="button1" type="submit" value="Submit"></div>
               </div>
           </section>
-          <div class="hero-cta"><input class="button1" type="submit" value="Submit"></div>
+          
       </main>
       </form>
     </body>
