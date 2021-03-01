@@ -15,7 +15,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author HP
  */
-public class NewServlet2 extends HttpServlet {
+public class InformServlet extends HttpServlet {
+    
+    DataCrudInterface dataCrud = new Crud();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,7 +41,9 @@ public class NewServlet2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            request.getRequestDispatcher("Fill_Form.jsp").forward(request,response);
+        
+            request.setAttribute("data", dataCrud.readData());
+            request.getRequestDispatcher("Lab3.jsp").forward(request, response);
     }
 
     /**
@@ -53,15 +57,43 @@ public class NewServlet2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         Product
-                product = new Product( 
-                request.getParameter("name"),
-                request.getParameter("color"),
-                request.getParameter("delivery"));
-         
-         request.setAttribute("product", product);
-        request.getRequestDispatcher("/Filled_Form.jsp").forward(request, response);
+        
+            dataCrud.createData(
+            new Data(
+                    Integer.parseInt(request.getParameter("number")),
+                    request.getParameter("name"),
+                    request.getParameter("familyname"),
+                    Integer.parseInt(request.getParameter("age")),
+                    request.getParameter("email")
+            ));
+            doGet(request, response);
             
+    }
+    
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+            int ownnumber = Integer.parseInt(request.getParameter("number"));
+            dataCrud.updateData(ownnumber,
+            new Data(
+                    ownnumber,
+                    request.getParameter("name"),
+                    request.getParameter("familyname"),
+                    Integer.parseInt(request.getParameter("age")),
+                    request.getParameter("email")
+            ));
+            doGet(request, response);
+    }
+    
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        int ownnumber = Integer.parseInt(request.getParameter("number"));
+            dataCrud.deleteData(ownnumber);
+                    
+            doGet(request, response);
     }
     
     /**
