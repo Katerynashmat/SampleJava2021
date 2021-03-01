@@ -143,7 +143,7 @@ section{
                   <table cellpadding="0" cellspacing="0" border="0">
                       <tbody>
                           <tr>
-                      <input type="hidden" value="1"/>
+                      <input type="hidden" name="number" value="1"/>
                               <td><input type="text" name="name" required/></td>
                               <td><input type="text" name="familyname" required/></td>
                               <td><input type="text" placeholder="integer" name="age" required/></td>
