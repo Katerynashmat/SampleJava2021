@@ -122,7 +122,7 @@ section{
     </head>
     <body>
       <form action="<%=request.getContextPath()%>/" method="post">
-          <input type="hidden" name="title" value="Submited"/>
+          
       <main>
             <section>
               <!--for demo wrap-->

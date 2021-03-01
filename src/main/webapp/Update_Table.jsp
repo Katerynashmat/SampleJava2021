@@ -122,7 +122,7 @@ section{
     </head>
     <body>
       <form action="<%=request.getContextPath()%>/SecondInformServlet" method="post">
-          <input type="hidden" name="title" value="Submited"/>
+          
       <main>
             <section>
               <!--for demo wrap-->
@@ -151,7 +151,7 @@ section{
                           </tr>
                       </tbody>
                   </table>
-                           <div class="hero-cta"><input class="button1" type="submit" value="Update"></div>
+                           <div class="hero-cta"><input class="button1" type="submit" value="Update"/></div>
               </div>
           </section>
          
