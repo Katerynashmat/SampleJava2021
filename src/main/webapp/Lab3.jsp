@@ -29,7 +29,7 @@ table{
   background-color: rgba(255,255,255,0.3);
  }
 .tbl-content{
-  height:80px;
+  height:150px;
   overflow-x:auto;
   margin-top: 0px;
 }
@@ -122,7 +122,7 @@ section{
     height: 48px;
     text-align: center;
     white-space: nowrap;
-    margin-left: 320px;
+    margin-left: 550px;
 }
 
 .button3 {
@@ -131,7 +131,7 @@ section{
     font-size: 14px;
     letter-spacing: 0px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 0px;
     line-height: 16px;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -145,7 +145,7 @@ section{
     height: 48px;
     text-align: center;
     white-space: nowrap;
-    margin-left: 380px;
+    margin-left: -50px;
 }
 
 @keyframes bounce {
@@ -190,6 +190,9 @@ section{
                               <th>Family name</th>
                               <th>Age</th>
                               <th>Email</th>
+                              <th> </th>
+                              <th>Update</th>
+                              <th>Delete</th>
                           </tr>
                       </thead>
                   </table>
@@ -204,6 +207,7 @@ section{
                               <th><%=data.getFamilyname()%></th>
                               <th><%=data.getAge()%></th>
                               <th><%=data.getEmail()%></th>
+                              <th></th>
                           
                               <th><form action="Update_Table.jsp" method="post">
                           <input type="hidden" name="number" value="<%=data.getNumber()%>"/>
@@ -224,9 +228,7 @@ section{
               </div>
           </section>
           <form action="Fill_Table.jsp">
-              <div class="hero-cta"><input class="button1" type="submit" value="Delete"></div>
-              <div class="hero-cta"><input class="button2" type="submit" value="Add new"></div>
-              <div class="hero-cta"><input class="button3" type="submit" value="Update"></div>
+              <div class="hero-cta"><input class="button2" type="submit" value="Add new"></div>  
           </form>
 
       </main>
