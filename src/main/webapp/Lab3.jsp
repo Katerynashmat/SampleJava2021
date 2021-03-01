@@ -202,12 +202,12 @@ section{
                       <tbody>
                           <%for(Data data:dataList){ %>
                            <tr>
-                              <th><%=data.getNumber()%></th>
-                              <th><%=data.getName()%></th>
-                              <th><%=data.getFamilyname()%></th>
-                              <th><%=data.getAge()%></th>
-                              <th><%=data.getEmail()%></th>
-                              <th></th>
+                              <td><%=data.getNumber()%></td>
+                              <td><%=data.getName()%></td>
+                              <td><%=data.getFamilyname()%></td>
+                              <td><%=data.getAge()%></td>
+                              <td><%=data.getEmail()%></td>
+                              <td></td>
                           
                               <th><form action="Update_Table.jsp" method="post">
                           <input type="hidden" name="number" value="<%=data.getNumber()%>"/>

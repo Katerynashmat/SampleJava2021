@@ -143,7 +143,7 @@ section{
                   <table cellpadding="0" cellspacing="0" border="0">
                       <tbody>
                           <tr>
-                      <input type="hidden" value="<%=request.getParameter("number")%>"/>
+                      <input type="hidden" name="number" value="<%=request.getParameter("number")%>">
                               <td><input type="text" name="name" value="<%=request.getParameter("name")%>"></td>
                               <td><input type="text" name="familyname" value="<%=request.getParameter("familyname")%>"></td>
                               <td><input type="text" placeholder="integer" name="age" value="<%=request.getParameter("age")%>"></td>

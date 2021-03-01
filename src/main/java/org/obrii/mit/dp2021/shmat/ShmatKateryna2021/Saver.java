@@ -19,7 +19,7 @@ public class Saver {
     
     private Saver(){
         dataSaver = new ArrayList<>();
-        dataSaver.add(new Data(1, "Kateryna", "Shmat", 19, "katushkashmat@gmail.com"));
+        dataSaver.add(new Data(0, "Kateryna", "Shmat", 19, "katushkashmat@gmail.com"));
     }
     
     public static Saver getInstanse(){
