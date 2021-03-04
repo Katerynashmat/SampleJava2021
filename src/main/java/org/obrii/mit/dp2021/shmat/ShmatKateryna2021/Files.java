@@ -113,11 +113,28 @@ public class Files implements DataCrudInterface {
         this.file = file;
     }
 
-    @Override
-    public Object searchData(String parameter) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       public List<Data> filterData(String s) {
+
+ 
+       
+            
+        List<Data> newData = new ArrayList<>();
+        for (Data d : this.readData()) {
+            
+            if(d.getName().contains(s)){
+                newData.add(d);}
+                
+            
+        }
+        
+
+            return newData;
+
+        
+
     }
-                  
+
+           
     }
     
 

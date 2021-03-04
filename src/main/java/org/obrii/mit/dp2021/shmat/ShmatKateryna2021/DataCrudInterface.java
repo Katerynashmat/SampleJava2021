@@ -23,6 +23,6 @@ public interface DataCrudInterface {
     
     void writeData(List<Data> data);
 
-    public Object searchData(String parameter);
+    public List<Data> filterData(String s);
     
 }

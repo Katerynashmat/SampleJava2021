@@ -11,14 +11,13 @@ package org.obrii.mit.dp2021.shmat.ShmatKateryna2021;
  */
 public class Extra {
     
-    public static final String FILE_NAME="data.txt";
-
-    static Object getFileName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    static void setFileName(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static String fileName="";
+    
+    public static String getFileName(){
+    return fileName;
     }
     
+    public static void setFileName(String aFileName){
+    fileName = aFileName;
+    }
 }

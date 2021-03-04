@@ -6,6 +6,8 @@
 package org.obrii.mit.dp2021.shmat.ShmatKateryna2021;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -84,5 +86,6 @@ public class Data implements Serializable {
         return sb.toString();
     }
     
+ 
     
 }

@@ -218,13 +218,10 @@ section{
         <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
       <main>
           <section>
-              
-              <% String filterString =request.getParameter("filter");
-              if(filterString==null){filterString="";}
-              %>
+                   
                <form action= "<%=request.getContextPath()%>/" method="get">
               <div class="header__search">
-                  <input type="text" class="filtercl" name="filter" value="<%=filterString%>"/>
+                  <input type="text" class="filtercl" name="filter">
                   <input type="submit" class="button" value="Filter">
             </div>
                </form>
@@ -251,7 +248,6 @@ section{
                   <table cellpadding="0" cellspacing="0" border="0">
                       <tbody>
                           <%for(Data data:dataList){
-                          if(data.getName().contains(filterString)){
                           %>
                            <tr>
                               <td><%=data.getNumber()%></td>
@@ -274,7 +270,7 @@ section{
                           <div class="hero-cta"><input class="button3" type="submit" value="Delete"></div>
                       </form></th>
                       </tr>
-                          <%}}%>
+                          <%}%>
                       </tbody>
                   </table>
               </div>

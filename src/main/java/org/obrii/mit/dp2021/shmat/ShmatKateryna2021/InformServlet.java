@@ -18,7 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class InformServlet extends HttpServlet {
     
-    DataCrudInterface dataCrud = new Files(new File(Extra.FILE_NAME));
+    Files dataCrud = new Files(new File(Extra.getFileName()));
+//    FilesCrud CRUD = new FilesCrud(new File(Config.getFileName())
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,16 +44,22 @@ public class InformServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-          if(Extra.getFileName().equals("")){
-                Extra.setFileName(this.getServletContext().getRealPath("")+"data.txt");
-                dataCrud = new Files(Extra.getFileName());
-           }
-        
-        
-            request.setAttribute("data", dataCrud.readData());
-            request.getRequestDispatcher("Lab3.jsp").forward(request, response);
-    }
+            if (Extra.getFileName().equals("")) {
+            Extra.setFileName(this.getServletContext().getRealPath("") + "data.txt");
+            dataCrud = new Files(new File(Extra.getFileName()));
+        }
+                
+                if(request.getParameter("filter")!=null){
+                request.setAttribute("data", dataCrud.filterData(request.getParameter("filter")));
+                }
+                else{
+                request.setAttribute("data", dataCrud.readData());
+                }
+                request.getRequestDispatcher("Lab3.jsp").forward(request, response); 
+            }
 
+        
+     
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -64,7 +71,6 @@ public class InformServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        /*formType="create";*/
             dataCrud.createData(
             new Data(
                     Integer.parseInt(request.getParameter("number")),
@@ -82,7 +88,6 @@ public class InformServlet extends HttpServlet {
             throws ServletException, IOException {
         
             int ownnumber = Integer.parseInt(request.getParameter("number"));
-            /*formType="update";*/
             dataCrud.updateData(ownnumber,
             new Data(
                     ownnumber,
@@ -103,8 +108,6 @@ public class InformServlet extends HttpServlet {
                     
             doGet(request, response);
             
-            /*String s;
-            s.contains(s)*/
     }
     
     /**
