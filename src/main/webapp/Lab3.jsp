@@ -63,6 +63,41 @@ section{
   margin: 70px;
 }
 
+.header__search{
+   margin-top: 50px;
+   margin-left: 1020px;
+   width: 180px;
+   color: white;
+}
+
+.filtercl{
+    background-color: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.3);
+    border-style: inset; 
+}
+
+.button{
+    margin-left: 50px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 16px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    background-color: rgba(255,255,255,0.3);
+    color: #fff !important;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    justify-content: center;
+    padding: 12px 26px;
+    height: 38px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: 50px;
+}
+
 /* for custom scrollbar for webkit browser*/
 
 ::-webkit-scrollbar {
@@ -166,6 +201,10 @@ section{
     animation: bounce 1s;
 }
 
+.button:hover {
+    animation: bounce 1s;
+}
+
 .button2:hover {
     animation: bounce 1s;
 }
@@ -179,6 +218,17 @@ section{
         <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
       <main>
           <section>
+              
+              <% String filterString =request.getParameter("filter");
+              if(filterString==null){filterString="";}
+              %>
+               <form action= "<%=request.getContextPath()%>/" method="get">
+              <div class="header__search">
+                  <input type="text" class="filtercl" name="filter" value="<%=filterString%>"/>
+                  <input type="submit" class="button" value="Filter">
+            </div>
+               </form>
+            
               <!--for demo wrap-->
               <h1>Information table</h1>
               <div class="tbl-header">
@@ -200,7 +250,9 @@ section{
               <div class="tbl-content">
                   <table cellpadding="0" cellspacing="0" border="0">
                       <tbody>
-                          <%for(Data data:dataList){ %>
+                          <%for(Data data:dataList){
+                          if(data.getName().contains(filterString)){
+                          %>
                            <tr>
                               <td><%=data.getNumber()%></td>
                               <td><%=data.getName()%></td>
@@ -222,7 +274,7 @@ section{
                           <div class="hero-cta"><input class="button3" type="submit" value="Delete"></div>
                       </form></th>
                       </tr>
-                          <%}%>
+                          <%}}%>
                       </tbody>
                   </table>
               </div>

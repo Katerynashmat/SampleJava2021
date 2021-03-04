@@ -14,11 +14,15 @@ import java.util.List;
 public interface DataCrudInterface {
 
     void createData(Data data);
+    
+    List<Data> readData();
 
     void deleteData(int number);
 
-    List<Data> readData();
-
     void updateData(int number, Data data);
+    
+    void writeData(List<Data> data);
+
+    public Object searchData(String parameter);
     
 }

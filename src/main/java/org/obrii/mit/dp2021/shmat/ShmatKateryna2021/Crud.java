@@ -39,5 +39,15 @@ public class Crud implements DataCrudInterface {
     public void deleteData(int number){
         dataList.remove(number);
     }
+
+    @Override
+    public void writeData(List<Data> data) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Object searchData(String parameter) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -5,11 +5,13 @@
  */
 package org.obrii.mit.dp2021.shmat.ShmatKateryna2021;
 
+import java.io.Serializable;
+
 /**
  *
  * @author HP
  */
-public class Data {
+public class Data implements Serializable {
     
     private int number;
     private String name;
