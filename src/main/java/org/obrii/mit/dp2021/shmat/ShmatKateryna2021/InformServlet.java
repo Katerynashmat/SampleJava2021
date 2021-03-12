@@ -5,6 +5,11 @@
  */
 package org.obrii.mit.dp2021.shmat.ShmatKateryna2021;
 
+import org.obrii.mit.dp2021.shmat.ShmatKateryna2021.dao.Dao;
+import org.obrii.mit.dp2021.shmat.ShmatKateryna2021.dao.DaoFactory;
+import org.obrii.mit.dp2021.shmat.ShmatKateryna2021.dao.UserDao;
+import org.obrii.mit.dp2021.shmat.ShmatKateryna2021.dao.impl.UserDaoImpl;
+
 import java.io.File;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -17,9 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author HP
  */
 public class InformServlet extends HttpServlet {
-    
-    Files dataCrud = new Files(new File(Extra.getFileName()));
-//    FilesCrud CRUD = new FilesCrud(new File(Config.getFileName())
+    UserDao userDao = DaoFactory.createUserDao();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,20 +46,15 @@ public class InformServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-            if (Extra.getFileName().equals("")) {
-            Extra.setFileName(this.getServletContext().getRealPath("") + "data.txt");
-            dataCrud = new Files(new File(Extra.getFileName()));
+
+        if (request.getParameter("filter") != null && !request.getParameter("filter").equals("")) {
+            System.out.println("." + request.getParameter("filter") + ".");
+            request.setAttribute("data", userDao.filterByLogin(request.getParameter("filter")));
+        } else {
+            request.setAttribute("data", userDao.findAll());
         }
-                
-                if(request.getParameter("filter")!=null){
-                request.setAttribute("data", dataCrud.filterData(request.getParameter("filter")));
-                }
-                else{
-                request.setAttribute("data", dataCrud.readData());
-                }
-                request.getRequestDispatcher("Lab3.jsp").forward(request, response); 
-            }
+        request.getRequestDispatcher("Lab3.jsp").forward(request, response);
+    }
 
         
      
@@ -71,14 +69,13 @@ public class InformServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            dataCrud.createData(
-            new Data(
-                    Integer.parseInt(request.getParameter("number")),
-                    request.getParameter("name"),
-                    request.getParameter("familyname"),
-                    Integer.parseInt(request.getParameter("age")),
-                    request.getParameter("email")
-            ));
+        Data data = new Data();
+        data.setNumber(Integer.parseInt(request.getParameter("number")));
+        data.setName(request.getParameter("name"));
+        data.setFamilyname(request.getParameter("familyname"));
+        data.setAge(Integer.parseInt(request.getParameter("age")));
+        data.setEmail(request.getParameter("email"));
+        userDao.create(data);
             doGet(request, response);
             
     }
@@ -86,28 +83,26 @@ public class InformServlet extends HttpServlet {
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-            int ownnumber = Integer.parseInt(request.getParameter("number"));
-            dataCrud.updateData(ownnumber,
-            new Data(
-                    ownnumber,
-                    request.getParameter("name"),
-                    request.getParameter("familyname"),
-                    Integer.parseInt(request.getParameter("age")),
-                    request.getParameter("email")
-            ));
-            doGet(request, response);
+        Data data = new Data();
+        data.setNumber(Integer.parseInt(request.getParameter("number")));
+        data.setName(request.getParameter("name"));
+        data.setFamilyname(request.getParameter("familyname"));
+        data.setAge(Integer.parseInt(request.getParameter("age")));
+        data.setEmail(request.getParameter("email"));
+        System.out.println(data);
+        userDao.update(data);
+        doGet(request, response);
     }
     
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         int ownnumber = Integer.parseInt(request.getParameter("number"));
-            dataCrud.deleteData(ownnumber);
-                    
-            doGet(request, response);
-            
+        userDao.delete(ownnumber);
+
+        doGet(request, response);
+
     }
     
     /**
