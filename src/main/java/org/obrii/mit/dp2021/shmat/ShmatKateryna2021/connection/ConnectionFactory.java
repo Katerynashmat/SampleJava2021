@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
     private static final String driverClassName = "com.postgresql.cj.jdbc.Driver";
-    private static final String connectionUrl = "jdbc:postgresql://localhost:5432/db2021mit21s20";
+    private static final String connectionUrl = "jdbc:postgresql://public.users/db2021mit21s20/s20@Shop";
     private static final String dbUser = "s20";
     private static final String dbPwd = "6546";
 
