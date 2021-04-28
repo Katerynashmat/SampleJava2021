@@ -206,6 +206,51 @@ section{
             <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                     <tr>
+                        <th>Name</th>
+                        
+                        <th>age</th>
+                  <th></th>
+                <th></th>
+             
+                </thead>
+                <tbody>
+                <tr th:each="student : ${students}">
+                    
+                     <td th:text="${student.name}"></td>
+                    <td th:text="${student.age}"></td>
+     <td 
+         
+        ><form action="./update" method="post">
+                <input type="hidden" name="url" th:value="${student.getHref()}">
+                <input type="text" name="name" th:value="${student.name}"/>
+                <input type="text" name="age" th:value="${student.age}"/>
+                <button id="hero-cta" type="submit" class="button0"><span>Update</span></button> 
+                
+            </form> </td>
+            <td 
+         
+        ><form action="./del" method="post">
+                <input type="hidden" name="url" th:value="${student.getHref()}">
+                <button id="hero-cta" type="submit" class="button3"><span>Delete</span></button> 
+                
+            </form> </td>
+                     <p ></p>
+            <p ></p>
+            <p ></p>
+                    
+
+                </tr>
+                <tr>
+                    <form action="./post" method="post">
+                   <td><input type="text" name="name" /></td> 
+                     <td><input type="text" name="age" /></td> 
+                      <td colspan="2"><button id="hero-cta" type="submit" class="button1"><span>Post</span></button> </td> 
+                </form> 
+                    </tr>
+            </tbody>
+        </table>
+<!--                <thead>
+                    <tr>
 
 
                         <th>Name</th>
@@ -249,16 +294,16 @@ section{
                     
                 </tr>
             </tbody>
-        </table>
+        </table>-->
              </div>
             
     </div>
                 <div>
-    <form action="./signup">
+  <!--  <form action="./signup">
         <button  type="submit" id='hero-cta' class="button1"><span>Add user</span></button> 
-    </form>
-                <form action="./index">
-                    <button  type="submit" id='hero-cta1' class="button2"><span>Refresh</span></button>
+    </form> -->
+                <form action="./getMessage">
+                    <button  type="submit" id='hero-cta1' class="button2"><span>Renew</span></button>
                 </form>
             </div>
     
