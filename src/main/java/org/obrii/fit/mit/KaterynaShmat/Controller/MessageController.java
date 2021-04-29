@@ -22,7 +22,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MessageController {
 
-    private final String URL = "http://dp2021.mit.obrii.org/NevmerzhytskyiProject/Lab7service/student";
+    private final String URL = "http://mit.fit.obrii.org/KaterynaShmatLab7/Lab7service/student";
 
     @Autowired
     RestTemplate restTemplate;
