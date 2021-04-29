@@ -12,47 +12,6 @@ and open the template in the editor.
     </head>
     <body>
         <div>TODO write content</div>
-
-        <form action="./add" method="post">
-            <input type="text" name="name" placeholder="Enter name"/>
-            <input type="text" name="age" placeholder="Enter age"/>
-            <input type="submit" value="Add new"/>
-        </form>   <br> <br> <br>
-
-        <div th:each="student:${students}">
-            <p th:text="${student.href}"></p>
-            <p th:text="${student.name}"></p>
-            <p th:text="${student.age}"></p>
-
-
-            <form action="./update" method="post">
-                <input type="hidden" name="url" th:value="${student.getHref()}">
-                <input type="text" name="name" th:value="${student.name}"/>
-                <input type="text" name="age" th:value="${student.age}"/>
-                <input type="submit" value="update"/>
-            </form>     
-
-            <form action="./delete" method="post">
-                <input type="hidden" name="url" th:value="${student.getHref()}">                
-                <input type="submit" value="delete"/>
-            </form>     
-
-
-
-
-        </div>
-
-    </body>
-</html>
-
-<!-- <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
         <div th:switch="${students}">
             <div th:each="student : ${students}">
 
@@ -64,4 +23,4 @@ and open the template in the editor.
 
          </div>
     </body>
-</html>  -->
+</html>  
